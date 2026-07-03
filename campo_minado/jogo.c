@@ -33,7 +33,7 @@ void espera_espaco() {
 }
 
 // Função retorna um tabuleiro novo
-short* make_tabuleiro() {
+char* make_tabuleiro() {
     //Cria uma tabela de indices para a lógica do fisher yates
     short indices[BOARDLENGTH*BOARDHEIGHT];
     char mapa[BOARDLENGTH*BOARDHEIGHT];
@@ -48,21 +48,44 @@ short* make_tabuleiro() {
         indices[i] = indices[r];
         indices[r] = troca;
     }
-    short dx[8] = {0, 1, 0, -1, 1, 1, -1, -1};
-    short dy[8] = {1, 0, -1, 0, -1, 1, -1, 1};
     for(short i = 0; i < BOARDLENGTH*BOARDHEIGHT; i++){
         if(mapa[i] == -1)continue;
         mapa[i] = '0';
+        short dx[8] = {0, 1, 0, -1, 1, 1, -1, -1};
+        short dy[8] = {1, 0, -1, 0, -1, 1, -1, 1};
         short x = i%BOARDLENGTH;
         short y = i/BOARDLENGTH;
         for(short j = 0; j < 8; j++){
             if(x + dx[j] < 0 || BOARDLENGTH <= x + dx[j])continue;
             if(y + dy[j] < 0 || BOARDHEIGHT <= y + dy[j])continue;
-            short id_viz = (y + dy[j])*BOARDLENGTH + x + dx[j];
-            if(mapa[id_viz] == -1)mapa[i]++;
+            short idViz = (y + dy[j])*BOARDLENGTH + x + dx[j];
+            if(mapa[idViz] == -1)mapa[i]++;
         }
     }
     return mapa;
+}
+
+//Função para recursivamente revelar todas as casas nulas e suas vizinhas a partir de um ponto
+void revelar_recursivo(short pos, char* revelado, char* mapa) {
+    //Paramos caso a casa já havia sido revelada
+    if(revelado[pos] == '1')return;
+    revelado[pos] = '1';
+    short x = pos%BOARDLENGTH;
+    short y = pos/BOARDLENGTH;
+    _outchar(mapa[pos], 80 * y + 2 * x + 81);
+
+    //Não revelamos os vizinhos de casas não nulas
+    if(mapa[pos] != '0')return;
+
+    //Itera pelos vizinhos
+    short dx[8] = {0, 1, 0, -1, 1, 1, -1, -1};
+    short dy[8] = {1, 0, -1, 0, -1, 1, -1, 1};
+    for(short j = 0; j < 8; j++){
+        if(x + dx[j] < 0 || BOARDLENGTH <= x + dx[j])continue;
+        if(y + dy[j] < 0 || BOARDHEIGHT <= y + dy[j])continue;
+        short vizPos = (y + dy[j])*BOARDLENGTH + x + dx[j];
+        revelar_recursivo(vizPos, revelado, mapa);
+    }
 }
 
 int main() {
