@@ -328,7 +328,7 @@
             if (bandeiras_restantes > 0) {
                 revelado_jogo[idx] = '2';
                 bandeiras_restantes = bandeiras_restantes - 1;
-                _outchar('F' + AMARELO, tela_pos);
+                _outchar('F'+ AMARELO, tela_pos);
             }
         } else if (revelado_jogo[idx] == '2') {
             revelado_jogo[idx] = '0';
@@ -613,27 +613,7 @@ void printYoulostScreen() {
     _outchar(2319, 976);
     _outchar(2319, 977);
     _outchar(2319, 979);
-    _outchar(84, 1006);
-    _outchar(69, 1007);
-    _outchar(78, 1008);
-    _outchar(84, 1009);
-    _outchar(65, 1010);
-    _outchar(82, 1011);
-    _outchar(25, 1012);
-    _outchar(78, 1013);
-    _outchar(79, 1014);
-    _outchar(86, 1015);
-    _outchar(65, 1016);
-    _outchar(77, 1017);
-    _outchar(69, 1018);
-    _outchar(78, 1019);
-    _outchar(84, 1020);
-    _outchar(69, 1021);
-    _outchar(16, 1026);
-    _outchar(83, 1027);
-    _outchar(65, 1028);
-    _outchar(73, 1029);
-    _outchar(82, 1030);
+    /* "TENTAR NOVAMENTE" e "SAIR" removidos, so fica PRESSIONE ESPACO */
     _outchar(16, 1046);
     _outchar(25, 1047);
     _outchar(25, 1048);
@@ -675,32 +655,17 @@ void printYoulostScreen() {
     _outchar(526, 1100);
     _outchar(526, 1101);
     _outchar(526, 1102);
-    _outchar(3152, 1105);
-    _outchar(3154, 1106);
-    _outchar(3141, 1107);
-    _outchar(3155, 1108);
-    _outchar(3155, 1109);
-    _outchar(3145, 1110);
-    _outchar(3151, 1111);
-    _outchar(3150, 1112);
-    _outchar(3141, 1113);
+    /* PRESSIONE (lado direito, ficava em cima de BACKSPACE) removido */
     _outchar(2319, 1129);
     _outchar(2319, 1130);
-    _outchar(581, 1132);
-    _outchar(590, 1133);
-    _outchar(596, 1134);
-    _outchar(581, 1135);
-    _outchar(594, 1136);
+    _outchar(581, 1131);
+    _outchar(595, 1132);
+    _outchar(592, 1133);
+    _outchar(577, 1134);
+    _outchar(579, 1135);
+    _outchar(591, 1136);
     _outchar(2319, 1137);
-    _outchar(3138, 1145);
-    _outchar(3137, 1146);
-    _outchar(3139, 1147);
-    _outchar(3147, 1148);
-    _outchar(3155, 1149);
-    _outchar(3152, 1150);
-    _outchar(3137, 1151);
-    _outchar(3139, 1152);
-    _outchar(3141, 1153);
+    /* BACKSPACE removido */
     _outchar(2319, 1175);
     return 0;
 }
