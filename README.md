@@ -12,3 +12,5 @@ Jogo feito em assembly feito pra rodar no processador ICMC para a disciplina de 
 O projeto consiste no desenvolvimento do jogo Campo Minado em assembly, usando a arquitetura do processador-ICMC (https://github.com/simoesusp/Processador-ICMC)
 
 # Fotos
+
+![Tela de vitória]("You won.png")
