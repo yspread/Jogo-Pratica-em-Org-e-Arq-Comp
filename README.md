@@ -16,11 +16,16 @@ O jogo consiste em um tabuleiro com 38 bombas espalhadas e o objetivo do jogador
 ### Comandos
 
 Espaço -> libera o espaço indicado pelo marcador vermelho
+
 F -> marca um espaço com uma bandeira (pra você marcar pra si mesmo que acha que tem uma bomba ali)
 
+
 W -> se move pra cima
+
 A -> se move pra esquerda
+
 S -> se move pra baixo
+
 D -> se move pra direita
 
 # Fotos
