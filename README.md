@@ -30,4 +30,4 @@ D -> se move pra direita
 
 # Fotos
 
-![Tela de vitória]("You won.png")
+![Tela de vitória](screenshots/youwon.png)
