@@ -30,15 +30,22 @@ D -> se move pra direita
 
 # Fotos
 
-![Tela inicial do jogo](screenshots/telainicio.jpeg)
 Tela de início do jogo
 
-![Jogo durante uma partida](screenshots/picjogo.jpeg)
+![Tela inicial do jogo](screenshots/telainicio.jpeg)
+
+
 Tela durante uma partida
 
-![Tela de vitória](screenshots/youwon.png)
+![Jogo durante uma partida](screenshots/picjogo.jpeg)
+
+
 Tela de vitória.
 
-![Tela de derrota](screenshots/youlost.jpeg)
+![Tela de vitória](screenshots/youwon.png)
+
+
 Tela de derrota
+
+![Tela de derrota](screenshots/youlost.jpeg)
 
