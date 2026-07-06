@@ -40,11 +40,6 @@ Tela durante uma partida
 ![Jogo durante uma partida](screenshots/picjogo.jpeg)
 
 
-Tela de vitória.
-
-![Tela de vitória](screenshots/youwon.png)
-
-
 Tela de derrota
 
 ![Tela de derrota](screenshots/youlost.jpeg)
